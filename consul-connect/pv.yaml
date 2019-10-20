@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  labels:
+    type: local
+  name: ${VOL_NAME}
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  hostPath:
+    path: ${VOL_DATA}
+    type: ""
+  persistentVolumeReclaimPolicy: Retain
+  volumeMode: Filesystem
+status: {}

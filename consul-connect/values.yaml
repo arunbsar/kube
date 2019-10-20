@@ -1,0 +1,14 @@
+ui:
+  enabled: true
+  service:
+    enabled: true
+    type: NodePort
+
+client:
+  enabled: true
+  grpc: true
+
+connectInject:
+  enabled: true
+server:
+  affinity: 
